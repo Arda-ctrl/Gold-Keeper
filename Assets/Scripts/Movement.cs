@@ -20,14 +20,14 @@ public class Movem : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
             {
-                // Bloðu +x yönünde hareket ettir
+                // Bloï¿½u +x yï¿½nï¿½nde hareket ettir
                 transform.Translate(Vector3.left * movement * Time.deltaTime);
             }
 
-            // D tuþuna basýldýðýnda
+            // D tuï¿½una basï¿½ldï¿½ï¿½ï¿½nda
             if (Input.GetKey(KeyCode.D))
             {
-                // Bloðu -x yönünde hareket ettir
+                // Bloï¿½u -x yï¿½nï¿½nde hareket ettir
                 transform.Translate(Vector3.right * movement * Time.deltaTime);
             }
 
@@ -41,7 +41,7 @@ public class Movem : MonoBehaviour
 
             if (Input.GetKey(KeyCode.S))
             {
-                // Bloðu -x yönünde hareket ettir
+                // Bloï¿½u -x yï¿½nï¿½nde hareket ettir
                 transform.Translate(Vector3.back * movement * Time.deltaTime);
             }
         }
@@ -49,7 +49,8 @@ public class Movem : MonoBehaviour
     }
     void OnCollisionEnter(Collision c)
     {
-        if(c.gameObject.tag.Equals ("coin")) {
+        if(c.gameObject.tag.Equals ("coin")) 
+        {
             AudioSource.PlayClipAtPoint(coin, transform.position);
             gameC.Coinincrease();
             Destroy (c.gameObject);
